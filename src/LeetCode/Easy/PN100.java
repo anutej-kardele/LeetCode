@@ -47,7 +47,7 @@ public class PN100 {
             boolean check_R_Full = node_P_R != null && node_Q_R != null;
             boolean check_R_Empty = node_P_R == null && node_Q_R == null;
 
-            if (check_L_Full || check_L_Empty) {
+            if ((node_P_L != null && node_Q_L != null) || check_L_Empty) {
                 if (check_L_Full) {
                     if (node_P_L.val != node_Q_L.val)
                         return false;
