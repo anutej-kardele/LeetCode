@@ -6,11 +6,34 @@ public class PN11 {
 
         int[] height = { 1, 8, 6, 2, 5, 4, 8, 3, 7 }; // 49
 
-        maxArea(height);
+        System.out.println("Max Area : " + maxArea(height));
     }
 
     public static int maxArea(int[] height) {
-        System.out.println("Print A ");
-        return 0;
+
+        int leftPointer = 0;
+        int rightPointer = height.length - 1;
+        int maxArea = 0;
+
+        while (leftPointer < rightPointer) {
+
+            int leftHeight = height[leftPointer];
+            int rightHeight = height[rightPointer];
+
+            // Calculate area and check
+            int length = leftHeight < rightHeight ? leftHeight : rightHeight;
+            int area = length * (rightPointer - leftPointer);
+
+            maxArea = area > maxArea ? area : maxArea;
+
+            if (leftHeight < rightHeight)
+                while (leftPointer < rightPointer && height[leftPointer] <= leftHeight)
+                    leftPointer++;
+            else
+                while (leftPointer < rightPointer && height[rightPointer] <= rightHeight)
+                    rightPointer--;
+        }
+
+        return maxArea;
     }
 }
