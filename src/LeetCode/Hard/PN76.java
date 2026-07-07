@@ -1,6 +1,6 @@
 package LeetCode.Hard;
 
-public class PN79 {
+public class PN76 {
 
     public static void main(String[] args) {
 
