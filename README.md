@@ -1,18 +1,23 @@
-## Getting Started
+# 💻 LeetCode Algorithm Solutions
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+A comprehensive collection of algorithmic problem solutions written entirely in Java. This repository tracks my ongoing progress through fundamental data structures, system patterns, and time-space complexity optimization. 
 
-## Folder Structure
+## 🗺️ Curriculum & Tracking
+Much of this repository follows the **NeetCode 75** roadmap, ensuring a structured approach to mastering core software engineering interview patterns. 
 
-The workspace contains two folders by default, where:
+## 📂 Repository Structure
+* **By Difficulty:** Problems are cleanly separated into `Easy`, `Medium`, and `Hard` directories.
+* **By Pattern:** Commits and file structures reflect the specific algorithmic pattern used to achieve optimal runtime, such as:
+  * Array & Hashing
+  * Two Pointers
+  * Sliding Window
+  * Stack
+  * Binary Search
+  * Linked Lists
+  * Tree
+  * Intervals
+  * 1-D Dynamic Programming 
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## ⚙️ Tech Stack & Validation
+* **Language:** Java (100%)
+* **Testing:** Solutions are executed, tested, and validated directly against LeetCode's internal test suites to ensure they pass all edge cases and meet time/space complexity requirements before being committed here.
