@@ -33,7 +33,8 @@ public class PN23 {
 
     public static ListNode merge(ListNode list1, ListNode list2) {
 
-        ListNode temp = new ListNode(0);
+        // ListNode temp = new ListNode(0);
+        ListNode temp = null;
         ListNode dummy = temp;
 
         while (list1 != null && list2 != null) {
