@@ -1,5 +1,7 @@
 package LeetCode.Medium;
 
+import LeetCode.TreeNode;
+
 public class PN98 {
 
     public boolean isValidBST(TreeNode root) {
@@ -20,22 +22,4 @@ public class PN98 {
         return validate(root.left, minValue, root.val) && validate(root.right, root.val, maxValue);
     }
 
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
 }

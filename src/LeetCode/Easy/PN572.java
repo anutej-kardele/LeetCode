@@ -1,5 +1,7 @@
 package LeetCode.Easy;
 
+import LeetCode.TreeNode;
+
 public class PN572 {
 
     public static void main(String[] args) {
@@ -25,25 +27,6 @@ public class PN572 {
             return false;
 
         return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
-    }
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 
 }
