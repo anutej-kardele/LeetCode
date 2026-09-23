@@ -7,14 +7,48 @@ public class PN213 {
     public static void main(String[] args) {
 
         // int[] nums = { 2, 3, 2 };
+        int[] nums = { 1, 2, 3 };
         // int[] nums = { 1, 1, 1, 2 };
         // int[] nums = { 2, 2, 4, 3, 2, 5 };
         // int[] nums = { 1, 3, 1, 3, 100 };
-        int[] nums = { 6, 3, 10, 8, 2, 10, 3, 5, 10, 5, 3 };
+        // int[] nums = { 6, 3, 10, 8, 2, 10, 3, 5, 10, 5, 3 };
         System.out.println(rob(nums));
     }
 
+    // new approach
     public static int rob(int[] nums) {
+
+        if (nums.length == 0)
+            return 0;
+        if (nums.length == 1)
+            return nums[0];
+
+        int[] num1 = Arrays.copyOfRange(nums, 1, nums.length);
+        int[] num2 = Arrays.copyOfRange(nums, 0, nums.length - 1);
+
+        return Math.max(robHelper(num1), robHelper(num2));
+    }
+
+    public static int robHelper(int[] nums) {
+
+        if (nums.length == 0)
+            return 0;
+        if (nums.length == 1)
+            return nums[0];
+
+        int previouseRob = 0, latestRob = 0;
+        int temp = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            temp = Math.max(nums[i] + previouseRob, latestRob);
+            previouseRob = latestRob;
+            latestRob = temp;
+        }
+
+        return latestRob;
+    }
+
+    public static int robOld(int[] nums) {
 
         if (nums.length == 1)
             return nums[0];
@@ -53,18 +87,6 @@ public class PN213 {
                 isFirstRobbed[i] = false;
             else
                 isFirstRobbed[i] = isFirstRobbed[i - 2];
-
-            // else {
-            // maxRob[i] = maxRob[i - 1];
-
-            // if (maxRob[i] == nums[i])
-            // isFirstRobbed[i] = false;
-            // else
-            // isFirstRobbed[i] = isFirstRobbed[i - 1];
-            // }
-
-            // maxRob[i] = Math.max(maxRob[i - 2] + nums[i], maxRob[i - 1]);
-            // isFirstRobbed[i] = maxRob[i] == maxRob[i - 2] + nums[i];
         }
 
         System.out.println(Arrays.toString(maxRob));
