@@ -4,11 +4,15 @@ import LeetCode.TreeNode;
 
 public class PN124 {
 
+    public static void main(String[] args) {
+        System.out.println("PN124");
+    }
+
     int max = Integer.MIN_VALUE;
 
     public int maxPathSum(TreeNode root) {
 
-        int total = maxPathSumRec(root);
+        maxPathSumRec(root);
         return max;
     }
 
