@@ -1,7 +1,5 @@
 package LeetCode.Easy;
 
-import java.util.Arrays;
-
 public class PN338 {
 
     public static void main(String[] args) {
